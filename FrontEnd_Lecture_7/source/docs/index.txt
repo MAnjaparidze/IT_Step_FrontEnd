@@ -1,0 +1,2 @@
+DOM - Document Object Model
+    საიტის შიდა სტრუქტურის .html .xml ფაილების მანიპულაციის საშუალება

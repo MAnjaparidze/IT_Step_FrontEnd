@@ -1,0 +1,51 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.playground {
+    width: 600px;
+    height: 600px;
+    border: 1px solid pink;
+    margin: 0 auto;
+}
+
+.ball {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    position: relative;
+}
+
+@keyframes myMove {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 200px;
+    }
+}
+
+.aquamarine_ball {
+    background-color: aquamarine;
+    animation: myMove 5s infinite;
+    /* animation: ease-in 3s infinite reverse both running; */
+    /* animation: 3s linear 1s infinite running; */
+}
+
+@keyframes darkgoldenrodMove {
+    from {
+        left: 600px;
+        top: 0px;
+    }
+    to {
+        left: 300px;
+        top: 300px;
+    }
+}
+
+.darkgoldenrod_ball {
+    background-color: darkgoldenrod;
+    animation: darkgoldenrodMove 5s infinite;
+}

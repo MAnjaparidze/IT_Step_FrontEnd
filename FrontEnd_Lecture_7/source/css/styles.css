@@ -1,0 +1,42 @@
+body {
+    /* background-color: red; */
+}
+
+.content {
+    padding: 0px 20px;
+    width: calc(100% - 40px);
+    height: 800px;
+    max-height: 1000px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: aquamarine;
+}
+
+.content_item {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.content_item h3 {
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.3);
+    padding: 5px 0px;
+}
+
+/* Scrollbar Customization */
+
+/* ::-webkit-scrollbar {
+background-color: lightyellow;
+} */
+
+.content::-webkit-scrollbar {
+    width: 10px;
+    background-color: lightskyblue;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: lightgreen;
+    border-radius: 50px;
+}

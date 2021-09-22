@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* width: 100%; */
+    width: calc(100% - 20px);
+    background-color: blanchedalmond;
+    padding: 10px;
+}
+
+.header_side-left nav a,
+.header_side-right nav a {
+    text-decoration: none;
+    color: brown;
+    transition: 300ms;
+}
+
+.header_side-left nav a:hover,
+.header_side-right nav a:hover {
+    color: rgba(165, 42, 42, 0.5);
+    transition: 300ms;
+}
+
+.header_side-right nav button {
+    background-color: transparent;
+    border: 1px solid burlywood;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.header_side-right nav button:hover {
+    transition: 300ms;
+    /* background-color: red; */
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    width: 90%;
+    /* background-color: darkblue; */
+    border: 1px solid darkblue;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+aside {
+    border: 1px solid darkcyan;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(30% - 25px);
+    margin-right: 10px;
+}
+
+aside ul {
+    list-style-type: none;
+}
+
+aside ul li button {
+    border: 1px solid rgb(1, 112, 112);
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 300ms;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    width: 85px;
+    text-align: left;
+}
+/* Another Option */
+.aside_topicItem {
+
+}
+
+aside ul li button:hover {
+    transition: 300ms;
+    background-color: rgb(0, 180, 180);
+}
+
+.contentWrapper {
+    border: 1px solid cornflowerblue;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(70% - 25px);
+}
+
+.content_articleItem {
+    border: 1px solid rgb(95, 142, 230);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.content_articleItem h4 {
+    border-bottom: 1px solid rgba(95, 142, 230, 0.2);
+    margin-bottom: 5px;
+}
+
+.content_articleItem section {
+    border-top: 1px solid rgba(95, 142, 230, 0.2);
+    margin-top: 5px;
+}

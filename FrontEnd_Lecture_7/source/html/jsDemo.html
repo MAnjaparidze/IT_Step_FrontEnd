@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="/source/html/index.html">Go to Main Page</a>
+
+    <h1>Magic Land</h1>
+    <input type="search" onchange="e => handleChange(e)">
+
+    <section>
+        <h4>Sum</h4>
+        <button id="decrement">-</button>
+        <button>+</button>
+        <div id="sumValue">1</div>
+    </section>
+
+
+    <button class="magicTrickCLASS"></button>
+    <button id="magicTrickID" type="button" onclick="magicTrick()">Wanna see a magic trick</button>
+</body>
+
+<script>
+    function magicTrick() {
+        // let a; // ცვლადი რომელიც ლოკალურად იქმნება, იცვლება და გამოიყენება
+        // var b; // ცვლადი რომელიც იქმნება, იცვლება და გამოიყენება
+        // const c; // ცვლადი რომელიც იქმნება, გამოიყენება მაგრამ არ იცვლება
+
+        // number - რიცხვი
+        // string - წინადადება, სიტყვა, ასო
+        // boolean - True / False 
+        let age = 25;
+        let name = "Mamuka";
+        let isOld = false;
+        const country = "Georgia";
+
+        console.log("Age: ", age);
+        console.log("Name: ", name);
+        console.log("Person is old: ", isOld);
+        console.log("Country of Origin: ", country);
+        console.log("Before");
+
+        age = 23;
+        name = "საბა";
+        isOld = true;
+        country = "Netherlands";
+        
+        console.log("Age: ", age);
+        console.log("Name: ", name);
+        console.log("Person is old: ", isOld);
+        console.log("Country of Origin: ", country);
+        console.log("Voila");
+    }
+
+    let classBtn = document.getElementsByClassName("magicTrickCLASS");
+    console.log(classBtn, " <=== This is Class Button");
+    let idBtn = document.getElementById("magicTrickID");
+    console.log(idBtn, " <=== This is Id Button");
+
+    let userRegisterObj = {
+        name: "ლენსტალბერი",
+        surname: "პაპიტო",
+        email: "__23@gmyahoo.com",
+        password: "YouShallNotPass@7",
+    }
+
+    // idBtn.addEventListener("click", magicTrick);
+
+
+
+    function handleChange(e) {
+        e.preventDefault();
+        let inputType = e.target.name;
+        let inputValue = e.target.value;
+
+
+        let data = [
+            {
+                name: "First"
+            },
+            {
+                name: "Second"
+            }
+        ];
+
+        let filteredData = data.map(item => {
+            return item.name === inputValue;
+        })
+        console.log(filteredData, " <==== FILTERED")
+        return filteredData;
+    }
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+h1 {
+    color: black;
+}
+img :last-child {
+    width: 250px;
+    height: 300px;
+    border-radius: 10%;
+}
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+thead {
+    color: green;
+}
+
+tbody {
+    color: greenyellow;
+}
+
+h3 {
+    font-style: italic;
+    color: darkgreen;
+}
+
+.demoHeader {
+    margin: 20px 0px;
+    font-size: 1.17em;
+    font-style: italic;
+    font-weight: bold;
+    /* color: darkgreen; */
+    /* border: 1px solid lightseagreen; */
+}
+
+.mainPage > .demoHeader {
+    color: darkgreen;
+}
+
+.aboutPage > .demoHeader {
+    color: darkgoldenrod;
+}
+table > thead * {
+    border: 1px solid red;
+}
+
+.paragraph {
+    background-color: yellow;
+}

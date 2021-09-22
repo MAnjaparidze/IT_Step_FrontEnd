@@ -1,0 +1,52 @@
+table {
+    border: 1px solid black;
+    width: 100%;
+}
+th, td {
+    /* text-align: center; */
+    border: 1px solid greenyellow;
+}
+
+
+/* DIV STYLING */
+
+.table {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.thead, .tbody {
+    width: 100%;
+}
+
+.tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid lightseagreen; */
+    padding: 5px 5px;
+    /* margin: 5px 0px; */
+    /* width: 100%; */
+}
+
+.th {
+    font-weight: bold;
+}
+
+.td, .th {
+    width: 24%;
+    border: 1px solid saddlebrown;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}

@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+main {
+    width: 100%;
+}
+
+main section {
+    /* background-color: #4a9341; */
+    /* background-color: rgba(184, 216, 80, 0.397); */
+    background-color: rgba(155, 122, 56, 0.3);
+}

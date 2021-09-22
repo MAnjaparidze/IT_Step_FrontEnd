@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">
+                <img height="50" src="./assets/icon/logo.png" alt="Website Icon">
+            </a>
+            <a href="/posts">Posts</a>
+            <a href="/about_us">About Us</a>
+        </nav>
+    </header>
+
+    <form action="https://formspree.io/f/mdoybgon" method="POST" class="register_form">
+        <!-- GET - ჩვენ არაფერს ვუგზავნით, ვიღებთ მხოლოდ ბექენდიდან -->
+        <!-- POST - ჩვენ ვუგზავნით ინფორმაციას, ინფორმაციას ახარისხებს ბექენდი, და სიტუაციის მიხედვით გვიბრუნებს პასუხს -->
+        <!-- PUT - ჩვენ ვუგზავნით ინფორმაციას, ინფორმაციას ახარისხებს / შესაცვლელად -->
+        <!-- DELETE - გამოიყენება არსებული ინფორმაციის წასაშლელად -->
+        
+        <label for="username">Username</label>
+        <input name="username" type="text" required minlength="3" maxlength="12">
+        
+        <label for="country">Country</label>
+        <input type="text" list="country">
+        <datalist id="country">
+            <option value="">Select your Country of Origin...</option>
+            <option value="Austria" id=""></option>
+            <option value="France"></option>
+            <option value="Czech Republic"></option>
+            <option value="Georgia"></option>
+        </datalist>
+
+        <label for="cities">City of Origin</label>
+        <select name="cities" id="cities" multiple>
+            <option value="">Select a City of Origin...</option>
+            <option value="1">New York City</option>
+            <option value="2">Barcelona</option>
+            <option value="3">Vladivastok</option>
+            <option value="4">Tbilisi</option>
+        </select>
+
+        <label for="courses"></label>
+        <select name="courses" id="courses">
+            <optgroup label="FrontEnd Courses">
+                <option value="1">HTML</option>
+                <option value="2">CSS</option>
+                <option value="3">Javascript</option>
+            </optgroup>
+            <optgroup label="BackEnd Courses">
+                <option value="1">Node.js</option>
+                <option value="2">ASP.NET</option>
+                <option value="3">Django</option>
+            </optgroup>
+        </select>
+
+        <label for="email">Email</label>
+        <input name="email" type="email" required minlength="6" maxlength="64">
+        
+        <label for="birth_date">Date of Birth</label>
+        <input name="birth_date" type="date" required>
+        
+        <label for="age">Age</label>
+        <input name="age" type="number" required min="1" max="9">
+        
+        <label for="password">Password</label>
+        <input name="password" type="password" required minlength="8" maxlength="64">
+
+        <label for="happiness_level">Happiness Level</label>
+        <input name="happiness_level" type="range" min="0" max="100" value="50">
+
+        <label for="profile_picture">Profile Image</label>
+        <input type="file" name="profile_picture" accept=".jpg, .png, .jpeg" multiple>
+        <input type="file" accept="image/*" multiple>
+        <div class="btn_wrapper">
+            <button type="submit" class="submit_btn">Submit</button>
+            <button type="reset" class="cancel_btn">Cancel</button>
+        </div>
+
+        <label for="remember_me">Remember Me</label>
+        <input name="remember_me" type="checkbox" required>
+    </form>
+</body>
+
+</html>
