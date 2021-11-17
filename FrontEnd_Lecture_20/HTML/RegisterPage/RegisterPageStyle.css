@@ -1,0 +1,132 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Viewing Height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#register_form {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 0px #83acd3;
+    background: linear-gradient(90deg, #83acd3, #12aebd);
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+.parallel_inputs-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.parallel_inputs-wrapper div {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+label {
+    font-size: 14px;
+    color: #000;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: calc(100% - 20px);
+    height: 20px;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    border-width: 0px 0px 2px 0px;
+    border-color: #a9cdf0;
+    border-radius: 5px;
+    transition: 300ms;
+    outline: none;
+}
+
+input::placeholder {
+    color: #7994a3;
+}
+
+input:focus {
+    border-color: #5491ca;
+    transition: 300ms;
+}
+
+.form-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+.form-navigation a {
+    text-decoration: none;
+    color: rgb(39, 93, 93);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    transition: 300ms;
+}
+
+.form-navigation a:hover {
+    color: rgb(0, 102, 102);
+    transition: 300ms;
+}
+
+.form_btn-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.form_btn-group button {
+    border: none;
+    border-radius: 8px;
+    width: 200px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1pt;
+}
+
+.form_register-btn {
+    color: #fff;
+    background: linear-gradient(45deg, rgb(39, 93, 93), rgb(12, 58, 58));
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.form_register-btn:hover {
+    transition: 300ms;
+    background-color: linear-gradient(45, rgb(12, 58, 58), rgb(39, 93, 93));
+}
+
+.form_reset-btn {
+    border: 1px solid rgb(12, 58, 58) !important;
+    cursor: pointer;
+    color: rgb(12, 58, 58);
+    transition: 300ms;
+}
+
+.form_reset-btn:hover {
+    background-color: rgb(203, 255, 255);
+    transition: 300ms;
+}

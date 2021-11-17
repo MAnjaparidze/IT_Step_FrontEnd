@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body class="pb-lg-5">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ps-2">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle='collapse' data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                        data-toggle="dropdown">
+                        Dropdown
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- ALT + SHIFT + Down Arrow -->
+                            <!-- CTRL + D -->
+                            <a class="dropdown-item" href="#">Dropdown Item #1</a>
+                            <a class="dropdown-item" href="#">Dropdown Item #2</a>
+                            <a class="dropdown-item" href="#">Dropdown Item #3</a>
+                            <a class="dropdown-item" href="#">Dropdown Item #4</a>
+                        </div>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+
+            <!-- me/pe - Margin/Padding Right -->
+            <!-- ms/ps - Margin/Padding Left -->
+            <!-- mt/pt - Margin/Padding Top -->
+            <!-- mb/pb - Margin/Padding Bottom -->
+
+            <!-- mx/px - Margin/Padding Left & Right -->
+            <!-- my/py - Margin/Padding Top & Bottom -->
+            <!-- m/p -->
+            <form class="d-inline-flex my-2 ms-auto me-lg-2">
+                <input type="search" class="form-control me-sm-2" placeholder="Search" aria-label="Search Input">
+                <button type="submit" class="btn btn-outline-success">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <h4 class="my-lg-3 ms-lg-2 text-info">Nav Pills</h4>
+    <nav class="navbar nav-pills container-fluid navbar-light navbar-expand-lg bg-info bg-gradient">
+        <div class="navbar-nav">
+            <a href="#" class="nav-item nav-link active">1</a>
+            <a href="#" class="nav-item nav-link ">2</a>
+            <a href="#" class="nav-item nav-link ">3</a>
+            <a href="#" class="nav-item nav-link ">4</a>
+            <a href="#" class="nav-item nav-link ">5</a>
+        </div>
+    </nav>
+
+    <h4 class="my-lg-3 ms-lg-2 text-info">Nav Tabs</h4>
+    <nav class="navbar nav-tabs container-fluid navbar-light navbar-expand-lg bg-success bg-gradient">
+        <div class="navbar-nav">
+            <a href="#" class="nav-item nav-link active">1</a>
+            <a href="#" class="nav-item nav-link ">2</a>
+            <a href="#" class="nav-item nav-link ">3</a>
+            <a href="#" class="nav-item nav-link ">4</a>
+            <a href="#" class="nav-item nav-link ">5</a>
+        </div>
+    </nav>
+
+    <h4 class="my-lg-3 ms-lg-2 text-info">Breadcrumbs</h4>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb ms-lg-2 mt-md-2">
+            <li class="breadcrumb-item">
+                <a href="#">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="#">Docs</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                <a href="#">Component</a>
+            </li>
+        </ol>
+    </nav>
+
+    <h4 class="my-lg-3 ms-lg-2 text-info">GRID</h4>
+    <div class="container">
+        <h4 class="mt-lg-4 text-warning">Grid Showcase 'sm' 'md' 'lg' 'xl' 'xxl'</h4>
+        <div class="container mt-lg-4">
+            <div class="row">
+                <div class="col-md bg-primary text-white">Row 1 Item 1</div>
+                <div class="col-md bg-secondary text-white">Row 1 Item 2</div>
+                <div class="col-md bg-success">Row 1 Item 3</div>
+            </div>
+            <div class="row">
+                <div class="col-sm bg-warning">Row 2 Item 1</div>
+                <div class="col-sm bg-info">Row 2 Item 2</div>
+                <div class="col-sm bg-light">Row 2 Item 3</div>
+            </div>
+        </div>
+
+        <h4 class="mt-lg-4 text-warning">Auto 'Col'</h4>
+        <div class="container mt-lg-4">
+            <div class="row">
+                <div class="col bg-success">Row 1 Item 1</div>
+                <div class="col bg-dark text-white">Row 1 Item 2</div>
+            </div>
+            <div class="row">
+                <div class="col bg-primary">Row 2 Item 1</div>
+                <div class="col bg-warning">Row 2 Item 2</div>
+                <div class="col bg-success">Row 2 Item 3</div>
+            </div>
+        </div>
+
+        <h4 class="mt-lg-4 text-warning">Specific Width</h4>
+        <div class="container">
+            <div class="row">
+                <div class="col bg-secondary">Row 1 Item 1</div>
+                <div class="col-6 bg-success">Row 1 Item 2</div>
+                <div class="col bg-warning">Row 1 Item 3</div>
+            </div>
+            <div class="row">
+                <div class="col-2 bg-dark text-white">Row 2 Item 1</div>
+                <div class="col-5 bg-light">Row 2 Item 2</div>
+                <div class="col bg-info">Row 2 Item 3</div>
+            </div>
+        </div>
+
+        h4
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
