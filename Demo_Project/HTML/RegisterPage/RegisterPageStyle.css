@@ -116,7 +116,7 @@ input:focus {
 
 .form_register-btn:hover {
     transition: 300ms;
-    background-color: linear-gradient(45, rgb(12, 58, 58), rgb(39, 93, 93));
+    background: linear-gradient(45, rgb(12, 58, 58), rgb(39, 93, 93));
 }
 
 .form_reset-btn {
