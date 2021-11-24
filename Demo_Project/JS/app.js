@@ -49,6 +49,14 @@ function submitRegisterForm(e) {
 }
 
 
+let someObject = {
+    name: "Mamuka",
+
+    createDate: new Date(),
+}
+
+console.log(someObject);
+
 
 
 registerForm.addEventListener("submit", submitRegisterForm);
