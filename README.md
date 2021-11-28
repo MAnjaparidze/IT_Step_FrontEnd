@@ -24,8 +24,12 @@
 
 **git push** - Push your changes to the current 'branch'
 
-**git push origin "Branch Name"** - Push your changes to the specific 'branch'
+**git push origin BRANCH_NAME --set-upstream** - Create new Remote Branch "BRANCH_NAME" & Push your changes to it
 
 **git pull** - Pull every single change from the corresponding Remote Branch
 
-**git pull origin "Branch Name"** - Pull every single change from specific Remote Branch
+**git pull origin BRANCH_NAME** - Pull every single change from specific Remote Branch
+
+**git checkout -b BRANCH_NAME** - Create new branch "BRANCH_NAME"
+
+**git checkout BRANCH_NAME** - Change branch to existing one "BRANCH_NAME"
