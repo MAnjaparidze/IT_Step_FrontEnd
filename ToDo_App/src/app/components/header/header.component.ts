@@ -13,12 +13,5 @@ export class HeaderComponent implements OnInit {
     // ამის შიგნით რაც დაიწერება ის განხორციელდება იქამდე
     // სანამ ჩაიტვირთება ამ ფაილის HTML
   }
-
-  toggleAddTask() {
-    console.log("Baro Baro");
-  }
-
-  toggleDeleteTask() {
-    console.log("Deleting Task")
-  }
+  
 }
