@@ -1,4 +1,7 @@
 <div class="todoItem_container">
-    <div>{{todoName}}</div>
-    <span>Date: 23 November</span>
+    <div class="todo-name_wrapper">
+        <div>{{todo.todoName}}</div>
+        <fa-icon (click)="onDeleteClick(todo)" [icon]="faTimes" [ngStyle]="{'color': 'red'}"></fa-icon>
+    </div>
+    <span>{{todo.day}}</span>
 </div>

@@ -2,9 +2,10 @@
     <app-header></app-header>
     <app-input inputLable="Add New To Do" inputType="text" inputName="addNewToDo" (addToDo)="addNewToDo"></app-input>
     <app-button color="green" btnTextColor="white" text="Add" (btnClick)="toggleAddTask()"></app-button>
-    <app-button color="red" btnTextColor="white" text="Delete" (btnClick)="toggleDeleteTask()"></app-button>
+    <!-- <app-button color="red" btnTextColor="white" text="Delete" (btnClick)="toggleDeleteTask()"></app-button> -->
 
     <div class="todo-item_wrapper">
-        <app-todo-item todoName="First To Do Item"></app-todo-item>
+        <!-- <app-todo-item todoName="First To Do Item"></app-todo-item> -->
+        <app-todo-item *ngFor="let todo of todos" [todo]="todo" (handleDelete)="handleDelete(todo)"></app-todo-item>
     </div>
 </div>
