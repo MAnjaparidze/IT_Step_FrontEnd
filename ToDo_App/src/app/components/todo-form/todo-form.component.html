@@ -1,0 +1,5 @@
+<form class="todo-form" (ngSubmit)="handleSubmit()">
+    <app-input inputLabel="ToDo Title" inputType="text" inputName="todoName" (handleInputChange)="handleInputChange($event)"></app-input>
+    <app-input inputLabel="Due Date" inputType="text" inputName="dueDate"  (handleInputChange)="handleInputChange($event)"></app-input>
+    <app-button  color="pink" btnTextColor="white" text="Save new To Do" type="submit"></app-button>
+</form>
