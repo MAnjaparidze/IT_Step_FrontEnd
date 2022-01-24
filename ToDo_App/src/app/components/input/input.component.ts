@@ -6,14 +6,23 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
-  @Input() inputType: string | undefined;
-  @Input() inputLable: string | undefined;
-  @Input() inputName: string | undefined;
+  @Input() inputType: string;
+  @Input() inputLabel: string;
+  @Input() inputName: string;
+
+  @Output() handleInputChange: EventEmitter<any> = new EventEmitter();
+
+  inputValue: string = "";
 
   @Output() addToDo = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  handleChange(event: any) {
+    this.handleInputChange.emit(event);
   }
 
   handleKeyPress(event: any) {

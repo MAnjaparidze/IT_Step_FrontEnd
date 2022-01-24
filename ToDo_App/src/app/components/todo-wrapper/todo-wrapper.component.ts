@@ -12,6 +12,8 @@ import { TodoService } from 'src/app/service/todo.service';
 
 export class TodoWrapperComponent implements OnInit {
   todos: IToDo[] = [];
+  formActive: boolean = false;
+
   constructor(private todoService: TodoService ) { }
 
   ngOnInit(): void {
@@ -20,9 +22,9 @@ export class TodoWrapperComponent implements OnInit {
     this.todoService.getToDos().subscribe((todoArray) => this.todos = todoArray);
   }
 
-  toggleAddTask() {
-    console.log("Baro Baro");
-  }
+  toggleFormActive() {
+    this.formActive = !this.formActive;
+  };
 
   handleDelete(todo: IToDo) {
     console.log("Deleting Task");
@@ -32,7 +34,8 @@ export class TodoWrapperComponent implements OnInit {
     })
   }
 
-  addNewToDo(todo: string) {
-    console.log(`New To Do: "${todo}"`)
+  handleCreateToDo(todo: string) {
+    console.log(`New To Do: "${todo}"`);
+    
   }
 }

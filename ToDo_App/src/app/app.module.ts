@@ -10,6 +10,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { TodoWrapperComponent } from './components/todo-wrapper/todo-wrapper.component';
 import { InputComponent } from './components/input/input.component';
 import { TodoItemComponent } from './components/todo-item/todo-item.component';
+import { TodoFormComponent } from './components/todo-form/todo-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TodoItemComponent } from './components/todo-item/todo-item.component';
     ButtonComponent,
     TodoWrapperComponent,
     InputComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    TodoFormComponent
   ],
   imports: [
     BrowserModule,

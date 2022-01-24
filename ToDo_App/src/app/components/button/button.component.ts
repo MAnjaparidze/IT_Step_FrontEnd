@@ -8,9 +8,10 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 // Javascript
 export class ButtonComponent implements OnInit {
-  @Input() text: string | undefined;
-  @Input() color: string | undefined;
-  @Input() btnTextColor: string | undefined;
+  @Input() text: string;
+  @Input() color: string;
+  @Input() btnTextColor: string;
+  @Input() type: string;
 
   @Output() btnClick = new EventEmitter();
 
@@ -20,7 +21,6 @@ export class ButtonComponent implements OnInit {
   }
 
   onClick() {
-    console.log("First Step ", this.text, this.color);
     this.btnClick.emit();
   }
 }

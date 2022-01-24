@@ -15,13 +15,25 @@ export class TodoItemComponent implements OnInit {
   @Output() handleDelete: EventEmitter<IToDo> = new EventEmitter();
   faTimes = faTimes;
 
+  isDone = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggleToDoFinish() {
+    this.isDone = !this.isDone;
+  }
+
   onDeleteClick(toDo: IToDo) {
     console.log("Trying to Delete ToDo: ", toDo);
     this.handleDelete.emit(toDo);
+  }
+
+  currentStyles = {
+    "color": this.isDone ? "green" : "black",
+    "font-style": this.isDone ? "italic" : "normal",
+    "font-weight": this.isDone ? "bold" : "normal"
   }
 }

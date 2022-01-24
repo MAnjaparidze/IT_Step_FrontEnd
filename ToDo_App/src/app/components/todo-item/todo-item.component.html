@@ -1,4 +1,8 @@
-<div class="todoItem_container">
+<div 
+ class="todoItem_container"
+ [ngStyle]="currentStyles"
+ (click)="toggleToDoFinish()"
+>
     <div class="todo-name_wrapper">
         <div>{{todo.todoName}}</div>
         <fa-icon (click)="onDeleteClick(todo)" [icon]="faTimes" [ngStyle]="{'color': 'red'}"></fa-icon>
