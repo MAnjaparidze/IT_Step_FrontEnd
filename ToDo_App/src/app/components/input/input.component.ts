@@ -10,27 +10,14 @@ export class InputComponent implements OnInit {
   @Input() inputLabel: string;
   @Input() inputName: string;
 
-  @Output() handleInputChange: EventEmitter<any> = new EventEmitter();
+  @Input() inputValue: string;
 
-  inputValue: string = "";
+  // todo-form =todoName= + inputValue + HTMLInputElement
 
-  @Output() addToDo = new EventEmitter();
+  @Output() inputValueChange: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  handleChange(event: any) {
-    this.handleInputChange.emit(event);
-  }
-
-  handleKeyPress(event: any) {
-    const { name, value } = event.target;
-    
-    console.log(event);
-    console.log(name, " [INPUT NAME]");
-    console.log(value, " [INPUT VALUE]");
-    this.addToDo.emit(value);
   }
 }

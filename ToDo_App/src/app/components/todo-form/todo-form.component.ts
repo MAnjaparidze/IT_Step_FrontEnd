@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
+import { IToDo } from 'src/app/interfaces/IToDo';
+
 @Component({
   selector: 'app-todo-form',
   templateUrl: './todo-form.component.html',
@@ -8,24 +10,18 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 
 export class TodoFormComponent implements OnInit {
-  // @Output
-  todoObject = {
-    todoName: '',
-    dueDate: '',
-  }
+  todoName: string = "";
+  day: string = "";
+
+  @Output() createToDo: EventEmitter<IToDo> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
-    handleInputChange(event: any) {
-      let { name, value } = event.target as HTMLInputElement;
-      console.log(name, value, " [ON CHANGE]");
-    }
-
-    handleSubmit() {
-      console.log("Test", this.todoObject.todoName);
-    }
+  handleSubmit() {
+    console.log("Added New Task: ", this.todoName, this.day);
+    this.createToDo.emit({ todoName: this.todoName, day: this.day })
   }
+}

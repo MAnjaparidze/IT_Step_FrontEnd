@@ -2,9 +2,9 @@
     <app-header></app-header>
   
     <app-button type="button" [color]="formActive ? 'red' : 'green'" btnTextColor="white" [text]="formActive ? 'Close' : 'Add'" (btnClick)="toggleFormActive()"></app-button>
-    <app-todo-form *ngIf="formActive"></app-todo-form>
+    <app-todo-form *ngIf="formActive" (createToDo)="handleCreateToDo($event)"></app-todo-form>
 
     <div class="todo-item_wrapper">
-        <app-todo-item *ngFor="let todo of todos" [todo]="todo" (handleDelete)="handleDelete(todo)"></app-todo-item>
+        <app-todo-item *ngFor="let todo of todos" [todo]="todo" (handleDelete)="handleDelete($event)"></app-todo-item>
     </div>
 </div>

@@ -14,11 +14,14 @@ export class TodoWrapperComponent implements OnInit {
   todos: IToDo[] = [];
   formActive: boolean = false;
 
-  constructor(private todoService: TodoService ) { }
+  constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
-    console.log("ON INIT")
     // this.todos = this.todoService.getToDos();
+    this.handleGetToDos();
+  }
+
+  handleGetToDos() {
     this.todoService.getToDos().subscribe((todoArray) => this.todos = todoArray);
   }
 
@@ -30,12 +33,26 @@ export class TodoWrapperComponent implements OnInit {
     console.log("Deleting Task");
     this.todoService.deleteToDo(todo).subscribe(() => {
       // this.todos = this.todos.filter(t => t.id !== todo.id);
-      this.todoService.getToDos().subscribe((todoArray) => this.todos = todoArray);
+      this.handleGetToDos();
     })
   }
 
-  handleCreateToDo(todo: string) {
-    console.log(`New To Do: "${todo}"`);
-    
+  handleCreateToDo(todoObject: IToDo) {
+    let sorted = this.todos.sort((a: any, b: any) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0)
+
+    for(let i = 0; i < sorted.length; i++) {
+      if(i !== sorted[i].id) {
+        todoObject.id = i;
+        break;
+      }
+    }
+
+    if(!todoObject.id) {
+      todoObject.id = this.todos.length;
+    }
+
+    this.todoService.createToDo(todoObject).subscribe(() => {
+      this.handleGetToDos();
+    })
   }
 }

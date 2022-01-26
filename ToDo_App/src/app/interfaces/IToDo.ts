@@ -1,5 +1,5 @@
 export interface IToDo {
-    id: number;
+    id?: number;
     todoName: string;
     day: string;
 }

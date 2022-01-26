@@ -1,4 +1,4 @@
 <div class="input-wrapper">
     <label [for]="inputName">{{inputLabel}}</label>
-    <input [id]="inputName" [type]="inputType" [(ngModel)]="inputValue" [name]="inputName" (change)="handleChange($event)">
+    <input [id]="inputName" [type]="inputType" [name]="inputName" [(ngModel)]="inputValue" (ngModelChange)="inputValueChange.emit($event)">
 </div>
