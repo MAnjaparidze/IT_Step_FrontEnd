@@ -3,11 +3,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
+  {
+    path: "admin",
+    canActivate: [AuthGuard],
+    loadChildren: () => import("./modules/admin/admin.module").then((m) => m.AdminModule)
+  },
   { path: "**", component: PageNotFoundComponent }
 ];
 
